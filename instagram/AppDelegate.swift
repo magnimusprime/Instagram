@@ -7,15 +7,33 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle());
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+      
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "Instagram"
+                configuration.clientKey = "FH478WCDEB8 72"
+                configuration.server = "https://secret-wildwood-50313.herokuapp.com/parse"
+            })
+        )
+        
+        // check if user is logged in.
+        
+       
+        if PFUser.currentUser() != nil {
+            // if there is a logged in user then load the home view controller
+           self.window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("homeNavigationController");
+        }
+        
         return true
     }
 
