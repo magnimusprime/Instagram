@@ -14,6 +14,9 @@
 		9F68407A1C8C9E2800B30D06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6840791C8C9E2800B30D06 /* Assets.xcassets */; };
 		9F68407D1C8C9E2800B30D06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F68407B1C8C9E2800B30D06 /* LaunchScreen.storyboard */; };
 		9FA565051C8CA2AA0047B584 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA565041C8CA2AA0047B584 /* LoginViewController.swift */; };
+		9FA5650A1C8CB5BC0047B584 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA565091C8CB5BC0047B584 /* Post.swift */; };
+		9FA5650E1C8CBC240047B584 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5650D1C8CBC240047B584 /* PostCell.swift */; };
+		9FA565101C8CCB280047B584 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5650F1C8CCB280047B584 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		9F68407C1C8C9E2800B30D06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F68407E1C8C9E2800B30D06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA565041C8CA2AA0047B584 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9FA565091C8CB5BC0047B584 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		9FA5650D1C8CBC240047B584 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		9FA5650F1C8CCB280047B584 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		CFD95C98C0790E703BA7D2BA /* Pods-instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instagram/Pods-instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		D72C88A1176285DF0E38EDA9 /* Pods-instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-instagram/Pods-instagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +77,9 @@
 		9F6840711C8C9E2800B30D06 /* instagram */ = {
 			isa = PBXGroup;
 			children = (
+				9FA565081C8CB57B0047B584 /* Models */,
 				9F6840721C8C9E2800B30D06 /* AppDelegate.swift */,
+				9FA5650D1C8CBC240047B584 /* PostCell.swift */,
 				9FA565061C8CA2B90047B584 /* View Controllers */,
 				9F6840761C8C9E2800B30D06 /* Main.storyboard */,
 				9F6840791C8C9E2800B30D06 /* Assets.xcassets */,
@@ -86,8 +94,17 @@
 			children = (
 				9F6840741C8C9E2800B30D06 /* HomeViewController.swift */,
 				9FA565041C8CA2AA0047B584 /* LoginViewController.swift */,
+				9FA5650F1C8CCB280047B584 /* PostViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9FA565081C8CB57B0047B584 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FA565091C8CB5BC0047B584 /* Post.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		ADF772B482C436499B930BBE /* Pods */ = {
@@ -221,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA565101C8CCB280047B584 /* PostViewController.swift in Sources */,
 				9FA565051C8CA2AA0047B584 /* LoginViewController.swift in Sources */,
 				9F6840751C8C9E2800B30D06 /* HomeViewController.swift in Sources */,
+				9FA5650E1C8CBC240047B584 /* PostCell.swift in Sources */,
 				9F6840731C8C9E2800B30D06 /* AppDelegate.swift in Sources */,
+				9FA5650A1C8CB5BC0047B584 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
